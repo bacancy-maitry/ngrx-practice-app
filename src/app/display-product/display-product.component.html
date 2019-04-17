@@ -1,0 +1,19 @@
+<p>
+  Display Product
+</p>
+
+<table border="1">
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products | async">
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.quantity}}</td>
+    </tr>
+  </tbody>
+</table>

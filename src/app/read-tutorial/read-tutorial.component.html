@@ -1,0 +1,11 @@
+<p>
+  Read-tutorial 
+</p>
+<ul>
+  <li *ngFor="let tutorial of tutorials | async; let i= index">
+      <a [href]="tutorial.url">{{tutorial.name}}</a> &nbsp;&nbsp;&nbsp;
+      <button type="submit" (click)="deleteTutorial(i)">Delete
+          Tutorial
+      </button>
+  </li>
+</ul>

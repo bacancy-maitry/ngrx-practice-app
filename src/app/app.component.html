@@ -1,17 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h3> Tutorials </h3>
-
-<ul>
-    <li *ngFor="let tutorial of tutorials | async; let i= index">
-        <a [href]="tutorial.url">{{tutorial.name}}</a> &nbsp;&nbsp;&nbsp;
-        <button type="submit" (click)="deleteTutorial(i)">Delete
-            Tutorial
-        </button>
-    </li>
-</ul>
-
-<input type="text" placeholder="Enter Name" #name> <br>
-<input type="text" placeholder="Enter Url" #url> <br>
-
-<button type="submit" (click)="addTutorial(name.value,url.value)">Add Tutorial</button>
+<app-add-tutorial></app-add-tutorial>
+<hr> 
+<app-read-tutorial></app-read-tutorial>
+<hr> <hr>
+<app-add-product></app-add-product>
 <hr>
+<app-display-product></app-display-product>

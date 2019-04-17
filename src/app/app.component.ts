@@ -13,19 +13,6 @@ import * as TutorialActions from './store/actions/tutorial.actions'
 export class AppComponent {
   title = 'app';
 
-  tutorials: Observable<TutorialInterface[]>;
+  constructor() { }
 
-  constructor(private store: Store<AppState>) {
-    this.tutorials = this.store.select('tutorial')
-    console.log(this.tutorials)
-  }
-
-  addTutorial(name, url) {
-    this.store.dispatch(new TutorialActions.AddTutorial({ name: name, url: url }))
-    console.log(name, url)
-  }
-
-  deleteTutorial(index) {
-    this.store.dispatch(new TutorialActions.RemoveTutorial(index))
-  }
 }

@@ -16,7 +16,7 @@ export class AppComponent {
   tutorials: Observable<TutorialInterface[]>;
 
   constructor(private store: Store<AppState>) {
-    this.tutorials = store.select('tutorial')
+    this.tutorials = this.store.select('tutorial')
     console.log(this.tutorials)
   }
 
